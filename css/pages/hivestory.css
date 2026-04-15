@@ -1,0 +1,214 @@
+body{
+    margin: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+*{
+    margin: 0;
+}
+
+.topbar{
+    border: solid 1px #CCCCCC;
+    padding: 16px;
+}
+
+.hs-mainimage{
+    max-width:1392px;
+    height: 289px;
+    background-color: #FFD52B;
+    border: solid 1px #E99536;
+    border-radius: 32px;
+    margin: 200px auto 0;
+    position: relative;
+    width: calc(100vw - 64px);
+    align-items: center;
+}
+
+.hs-mainimage img{
+    mix-blend-mode: color-burn;
+    scale: 1.5;
+    
+}
+
+.content{
+    position: absolute;
+    flex-direction: column;
+    display: flex;
+    max-width: 600%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 24px;
+    align-items: center;
+    gap: 8px;
+}
+
+.content h1{
+    font-size: 72px;
+    line-height: 80px;
+    font-weight: 600;
+    letter-spacing: -2%;
+    text-align: center;
+}
+
+.content p{
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.hs-story{
+    margin: 64px auto;
+    align-items: center;
+    padding: 0 32px;
+    max-width: 1124px;
+}
+
+.hs-article{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    color: #4D4D4D;
+
+}
+
+.hs-article p{
+    font-size: 2rem;
+    line-height: 48px;
+}
+
+article.reading .sentence {
+    color: #CCCCCC;
+    transition: color 0.3s ease;
+}
+
+.play-article{
+    background-color: rgba(107, 89, 18, 0.8);
+    border: solid 1px rgba(71, 60, 12, 0.5);
+    border-radius: 16px;
+    padding: 3px;
+}
+
+.button-icon-brand-sm{
+    padding: 5px 10px !important;
+    height: auto;
+}
+
+#pause-icon{
+    display: none;
+}
+
+/* Playing state — hide play, show pause */
+.play-btn.playing #play-icon {
+    display: none;
+}
+
+.play-btn.playing #pause-icon {
+    display: block;
+}
+
+/* Active sentence highlight */
+article.reading .sentence {
+    color: #CCCCCC;
+    transition: color 0.3s ease;
+}
+
+article.reading .sentence.active {
+    color: #000000;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.play-btn.playing {
+    background: #FFD52B;
+    color: #1a1a1a;
+}
+
+/* ============================================
+   TABLET — max-width: 1024px
+   ============================================ */
+@media (max-width: 1024px) {
+
+
+.hs-mainimage{
+    margin-top: 150px;
+}
+
+.content{
+    width: 600px;
+}
+
+.content h1{
+    font-size: 52px;
+}
+
+.hs-article p{
+    font-size: 1.4rem;
+    line-height: 30px;
+}
+}
+
+/* ============================================
+   MOBILE — max-width: 768px
+   ============================================ */
+@media (max-width: 768px) {
+
+.content{
+    width: 320px;
+    gap: 16px;
+}
+
+.content h1{
+   font-size: 48px;
+   line-height: 56px;
+}
+
+.hs-article p{
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+
+.hs-mainimage {
+    width: calc(100vw - 64px);  /* smaller margin on mobile */
+    margin: 150px auto 0;
+    height: auto;
+    min-height: 400px;
+}
+
+.hs-story{
+    padding: 0 16px;
+}
+}
+
+/* ============================================
+   SMALL MOBILE — max-width: 480px
+   Extra polish for very small screens
+   ============================================ */
+@media (max-width: 480px) {
+
+.content{
+    width: 280px;
+    gap: 16px;
+}
+
+.content h1{
+   font-size: 40px;
+   line-height: 48px;
+}
+
+.hs-article p{
+    font-size: 18px;
+    line-height: 26px;
+    text-align: justify;
+}
+
+.hs-mainimage {
+    min-height: 320px;
+}
+
+
+}
